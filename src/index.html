@@ -10,30 +10,17 @@
 
   <body>
     <main class="container">
-      <h1>Welcome to Tauri</h1>
-
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+      <div class="container">
+        <h1>Dynamic Table</h1>
+        <div class="input-container">
+          <input type="number" id="columns" min="1" placeholder="Number of Columns">
+          <input type="number" id="rows" min="1" placeholder="Number of Rows">
+          <button onclick="createTable()">Create Table</button></div>
+        <table id="myTable">
+          <!-- Table will be dynamically generated here -->
+        </table>
       </div>
-      <p>Click on the Tauri logo to learn more about the framework</p>
-
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-      <p id="greet-msg"></p>
+      <script src="tablescript.js"></script>
     </main>
   </body>
 </html>
